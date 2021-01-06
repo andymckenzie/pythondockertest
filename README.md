@@ -5,10 +5,10 @@ Requirements:
 - Data somewhere on your computer in a folder to use somewhere for training.
 
 Usage:
-Clone the repo
-docker build . -t lightgan
-sudo nvidia-docker run -it -v $path_to_images:/mnt --ipc=host lightgan:latest /bin/bash
-lightweight_gan --data /mnt --aug-prob 0.25 --aug-types [translation,cutout,color] --num-train-steps 500 [in container]
-exit
-sudo docker ps -a
-sudo docker cp $container_name:/results .
+- Clone the repo
+- docker build . -t lightgan
+- sudo nvidia-docker run -it -v $path_to_images:/mnt --ipc=host lightgan:latest /bin/bash
+- lightweight_gan --data /mnt --aug-prob 0.25 --aug-types [translation,cutout,color] --num-train-steps 500 [in container]
+- exit
+- sudo docker ps -a
+- sudo docker cp $container_name:/results .
